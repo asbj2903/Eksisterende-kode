@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eksisterende_kode
 {
-	interface IMenuItem
+	public interface IMenuItem
 	{
 		bool Activate(SmartMenu smartMenu);
 

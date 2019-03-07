@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eksisterende_kode
 {
-	class Request
+	public class Request
 	{
 		public static string String(string request)
 		{
