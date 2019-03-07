@@ -55,14 +55,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Travel\RemoveExpense.cs" />
+    <Compile Include="Travel\ShowAllCompensations.cs" />
+    <Compile Include="Travel\ShowCompensation.cs" />
+    <Compile Include="Travel\ShowExpense.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Travel\AddCompensationToDepartment.cs" />
+    <Compile Include="Travel\AddExpenditure.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Travel\CreateTravel.cs" />
+    <Compile Include="Travel\EditExpenditure.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
