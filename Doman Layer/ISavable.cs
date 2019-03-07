@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eksisterende_kode
+namespace Domain_Layer
 {
-	public interface IMenuItem
-	{
-		bool Activate(SmartMenu smartMenu);
-
-		string ToString();
-	}
+    public interface ISavable
+    {
+        void Save();
+    }
 }
+

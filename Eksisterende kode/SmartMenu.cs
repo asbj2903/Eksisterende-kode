@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eksisterende_kode
 {
-	class SmartMenu
+	public class SmartMenu
 	{
 		private string Title;
 		private string ExitDescription;
