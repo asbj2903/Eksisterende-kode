@@ -47,7 +47,7 @@
     <Compile Include="Appendices\Expenditure.cs" />
     <Compile Include="Appendices\trip.cs" />
     <Compile Include="Compensations\Compensation.cs" />
-    <Compile Include="Compensations\Driver.cs" />
+    <Compile Include="Compensations\Driving.cs" />
     <Compile Include="Compensations\Travel.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Employee.cs" />

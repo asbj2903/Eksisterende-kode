@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Domain_Layer;
+using Domain_Layer.Compensations;
 using Eksisterende_kode;
 using SmartMenuLibrary;
 
