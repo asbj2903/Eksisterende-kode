@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eksisterende kode", "Eksist
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doman Layer", "Doman Layer\Doman Layer.csproj", "{3D8DFEB9-D6F1-46F9-9676-C7D61430D7FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PresentationLayer", "PresentationLayer\PresentationLayer.csproj", "{1297F4B7-644A-4C73-92B8-E869B5D30284}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationLayer", "PresentationLayer\ApplicationLayer.csproj", "{1297F4B7-644A-4C73-92B8-E869B5D30284}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartMenuLibrary", "SmartMenuLibrary\SmartMenuLibrary.csproj", "{2C3B9CED-3181-47EA-8FF6-EDF417B02F8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartMenuLibrary", "SmartMenuLibrary\SmartMenuLibrary.csproj", "{2C3B9CED-3181-47EA-8FF6-EDF417B02F8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
