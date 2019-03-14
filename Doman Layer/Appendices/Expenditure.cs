@@ -37,53 +37,53 @@ namespace Domain_Layer.Appendices
             this.travel = expenditure_travel;
         }
 
-        internal static List<Expenditure> GetExpenditureByTravel(Travel travel)
-        {
-            List<Expenditure> driving = new List<Expenditure>();
-            using (SqlConnection connection = new SqlConnection(ConnectionString))
-            {
-                connection.Open();
+        //internal static List<Expenditure> GetExpenditureByTravel(Travel travel)
+        //{
+        //    List<Expenditure> driving = new List<Expenditure>();
+        //    using (SqlConnection connection = new SqlConnection(ConnectionString))
+        //    {
+        //        connection.Open();
 
-                SqlCommand command = new SqlCommand("GetExpenditureByTravel", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.Add(new SqlParameter("@travel", travel.Id));
+        //        SqlCommand command = new SqlCommand("GetExpenditureByTravel", connection);
+        //        command.CommandType = CommandType.StoredProcedure;
+        //        command.Parameters.Add(new SqlParameter("@travel", travel.Id));
 
-                SqlDataReader reader = command.ExecuteReader();
+        //        SqlDataReader reader = command.ExecuteReader();
 
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        int id = int.Parse(reader["id"].ToString());
-                        string title = reader["title"].ToString();
-                        int expenseType = int.Parse(reader["expensetype"].ToString());
-                        bool cash = bool.Parse(reader["cash"].ToString());
-                        DateTime date = DateTime.Parse(reader["date"].ToString());
-                        double amount = float.Parse(reader["amount"].ToString());
-                        driving.Add(new Expenditure(title, date, amount, (Type)expenseType, cash, travel));
-                    }
-                }
-            }
-            return driving;
-        }
+        //        if (reader.HasRows)
+        //        {
+        //            while (reader.Read())
+        //            {
+        //                int id = int.Parse(reader["id"].ToString());
+        //                string title = reader["title"].ToString();
+        //                int expenseType = int.Parse(reader["expensetype"].ToString());
+        //                bool cash = bool.Parse(reader["cash"].ToString());
+        //                DateTime date = DateTime.Parse(reader["date"].ToString());
+        //                double amount = float.Parse(reader["amount"].ToString());
+        //                driving.Add(new Expenditure(title, date, amount, (Type)expenseType, cash, travel));
+        //            }
+        //        }
+        //    }
+        //    return driving;
+        //}
 
-        public override void Save()
-        {
-            using (SqlConnection connection = new SqlConnection(ConnectionString))
-            {
-                connection.Open();
+        //public override void Save()
+        //{
+        //    using (SqlConnection connection = new SqlConnection(ConnectionString))
+        //    {
+        //        connection.Open();
 
-                SqlCommand command = new SqlCommand("insert_expenditure_appendix", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@title", Title);
-                command.Parameters.AddWithValue("@expensetype", expenseType);
-                command.Parameters.AddWithValue("@cash", cash);
-                command.Parameters.AddWithValue("@date", date);
-                command.Parameters.AddWithValue("@amount", amount);
-                command.Parameters.AddWithValue("@travel", travel.Id);
+        //        SqlCommand command = new SqlCommand("insert_expenditure_appendix", connection);
+        //        command.CommandType = CommandType.StoredProcedure;
+        //        command.Parameters.AddWithValue("@title", Title);
+        //        command.Parameters.AddWithValue("@expensetype", expenseType);
+        //        command.Parameters.AddWithValue("@cash", cash);
+        //        command.Parameters.AddWithValue("@date", date);
+        //        command.Parameters.AddWithValue("@amount", amount);
+        //        command.Parameters.AddWithValue("@travel", travel.Id);
 
-                command.ExecuteNonQuery();
-            }
-        }
+        //        command.ExecuteNonQuery();
+        //    }
+        //}
     }
 }

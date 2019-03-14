@@ -61,24 +61,24 @@ namespace Domain_Layer.Appendices
             return driving;
         }
 
-        public override void Save()
-        {
-            using (SqlConnection connection = new SqlConnection(ConnectionString))
-            {
-                connection.Open();
+        //public override void Save()
+        //{
+        //    using (SqlConnection connection = new SqlConnection(ConnectionString))
+        //    {
+        //        connection.Open();
 
-                SqlCommand command = new SqlCommand("insert_trip_appendix", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@title", Title);
-                command.Parameters.AddWithValue("@departuredestination", DepartureDestination);
-                command.Parameters.AddWithValue("@departuredate", DepartureDate);
-                command.Parameters.AddWithValue("@arrivaldestination", ArrivalDestination);
-                command.Parameters.AddWithValue("@arrivaldate", ArrivalDate);
-                command.Parameters.AddWithValue("@distance", Distance);
-                command.Parameters.AddWithValue("@driving", driving.Id);
+        //        SqlCommand command = new SqlCommand("insert_trip_appendix", connection);
+        //        command.CommandType = CommandType.StoredProcedure;
+        //        command.Parameters.AddWithValue("@title", Title);
+        //        command.Parameters.AddWithValue("@departuredestination", DepartureDestination);
+        //        command.Parameters.AddWithValue("@departuredate", DepartureDate);
+        //        command.Parameters.AddWithValue("@arrivaldestination", ArrivalDestination);
+        //        command.Parameters.AddWithValue("@arrivaldate", ArrivalDate);
+        //        command.Parameters.AddWithValue("@distance", Distance);
+        //        command.Parameters.AddWithValue("@driving", driving.Id);
 
-                command.ExecuteNonQuery();
-            }
-        }
+        //        command.ExecuteNonQuery();
+        //    }
+        //}
     }
 }

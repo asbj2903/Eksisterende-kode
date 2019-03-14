@@ -23,22 +23,22 @@ namespace Domain_Layer.Compensations
             AddAppendix(appendix as Appendix);
         }
 
-        public override void Save()
-        {
-            using (SqlConnection connection = new SqlConnection(ConnectionString))
-            {
-                connection.Open();
+        //public override void Save()
+        //{
+        //    using (SqlConnection connection = new SqlConnection(ConnectionString))
+        //    {
+        //        connection.Open();
 
-                SqlCommand command = new SqlCommand("insert_driving_compensation", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@title", Title);
-                command.Parameters.AddWithValue("@employee", Employee.Id);
-                command.Parameters.AddWithValue("@numberplate", NumberPlate);
+        //        SqlCommand command = new SqlCommand("insert_driving_compensation", connection);
+        //        command.CommandType = CommandType.StoredProcedure;
+        //        command.Parameters.AddWithValue("@title", Title);
+        //        command.Parameters.AddWithValue("@employee", Employee.Id);
+        //        command.Parameters.AddWithValue("@numberplate", NumberPlate);
 
-                Id = Convert.ToInt32(command.ExecuteScalar());
-            }
-            appendices.ForEach(o => o.Save());
-        }
+        //        Id = Convert.ToInt32(command.ExecuteScalar());
+        //    }
+        //    appendices.ForEach(o => o.Save());
+        //}
 
         internal static List<Driving> GetDrivingByEmployee(Employee employee)
         {

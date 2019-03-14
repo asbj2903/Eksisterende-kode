@@ -8,7 +8,7 @@ namespace Domain_Layer.Appendices
 {
     public abstract class Appendix : ISavable
     {
-        protected static readonly string ConnectionString = "Server=EALSQL1.eal.local; Database=B_DB17_2018; User Id=B_STUDENT17; Password=B_OPENDB17;";
+        //protected static readonly string ConnectionString = "Server=EALSQL1.eal.local; Database=B_DB17_2018; User Id=B_STUDENT17; Password=B_OPENDB17;";
         public int Id { get; internal set; }
         public readonly string Title;
 
