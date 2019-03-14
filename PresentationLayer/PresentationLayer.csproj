@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Doman Layer\Doman Layer.csproj" />
     <ProjectReference Include="..\Eksisterende kode\Eksisterende kode.csproj" />
+    <ProjectReference Include="..\SmartMenuLibrary\SmartMenuLibrary.csproj" />
   </ItemGroup>
 
 </Project>

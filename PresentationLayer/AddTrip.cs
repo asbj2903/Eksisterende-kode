@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Eksisterende_kode;
+﻿
+using System;
+using SmartMenuLibrary;
 
 namespace PresentationLayer
 {

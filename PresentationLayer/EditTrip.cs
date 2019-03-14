@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Domain_Layer.Appendices;
+using Domain_Layer.Compensations;
 using Eksisterende_kode;
+using SmartMenuLibrary;
 
 namespace PresentationLayer
 {
