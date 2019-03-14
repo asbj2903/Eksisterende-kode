@@ -11,10 +11,10 @@ namespace Domain_Layer.Appendices
 {
     public class Expenditure : Appendix
     {
-        public readonly Type ExpenseType;
-        public readonly bool Cash;
-        public readonly DateTime Date;
-        public readonly double Amount;
+        public readonly Type expenseType;
+        public readonly bool cash;
+        public readonly DateTime date;
+        public readonly double amount;
         private readonly Travel travel;
 
         public enum Type
@@ -28,13 +28,13 @@ namespace Domain_Layer.Appendices
             Bankkortgebyr = 96440
         }
 
-        public Expenditure(string title, DateTime date, double amount, Type type, bool cash, Travel travel) : base(title)
+        public Expenditure(string expenditure_title, DateTime expenditure_date, double expenditure_amount, Type expenditure_type, bool expenditure_cash, Travel expenditure_travel) : base(expenditure_title)
         {
-            Date = date;
-            Amount = amount;
-            ExpenseType = type;
-            Cash = cash;
-            this.travel = travel;
+            date = expenditure_date;
+            amount = expenditure_amount;
+            expenseType = expenditure_type;
+            cash = expenditure_cash;
+            this.travel = expenditure_travel;
         }
 
         internal static List<Expenditure> GetExpenditureByTravel(Travel travel)
@@ -76,10 +76,10 @@ namespace Domain_Layer.Appendices
                 SqlCommand command = new SqlCommand("insert_expenditure_appendix", connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@title", Title);
-                command.Parameters.AddWithValue("@expensetype", ExpenseType);
-                command.Parameters.AddWithValue("@cash", Cash);
-                command.Parameters.AddWithValue("@date", Date);
-                command.Parameters.AddWithValue("@amount", Amount);
+                command.Parameters.AddWithValue("@expensetype", expenseType);
+                command.Parameters.AddWithValue("@cash", cash);
+                command.Parameters.AddWithValue("@date", date);
+                command.Parameters.AddWithValue("@amount", amount);
                 command.Parameters.AddWithValue("@travel", travel.Id);
 
                 command.ExecuteNonQuery();
